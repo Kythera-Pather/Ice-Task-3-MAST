@@ -16,11 +16,33 @@ export default function MovieScreen() {
     const num = parseInt(choice);
 
     if (isNaN(num) || num < 1 || num > 5) {
-      Alert.alert("Invalid Choice", "Please choose a number between 1 and 5.");
+      alert("Invalid Choice, Please select a number between 1 and 5");
       return;
     }
 
-    Alert.alert("Movie Selected", `You chose: ${movies[num - 1]}`);
+    let note = "";
+
+    switch (num) {
+      case 1:
+        note = "A masterpiece by Christopher Nolan with a legendary Joker performance.";
+        break;
+      case 2:
+        note = "A mind-bending thriller that explores dreams within dreams.";
+        break;
+      case 3:
+        note = "A space epic that questions time, love, and survival.";
+        break;
+      case 4:
+        note = "A sci-fi classic that redefined the genre and introduced 'bullet time'.";
+        break;
+      case 5:
+        note = "The epic finale to the Infinity Saga in the Marvel Universe.";
+        break;
+      default:
+        note = "No note available."; // Fallback (should not hit)
+    }
+
+    Alert.alert("Movie Selected", `You chose: ${movies[num - 1]}\n\nNote: ${note}`);
   };
 
   return (

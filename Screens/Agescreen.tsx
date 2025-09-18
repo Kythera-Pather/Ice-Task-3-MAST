@@ -16,21 +16,21 @@ export default function AgeScreen({ navigation }: Props) {
     const ageNum = parseInt(age);
 
     if (isNaN(ageNum)) {
-      Alert.alert("Invalid Input", "Please enter a valid number.");
+      alert("Invalid Input, Please enter a valid number");
       return;
     }
 
-    if (ageNum < 18) {
-      Alert.alert("Access Denied", "You must be 18 or older to proceed.");
+    else if (ageNum < 18) {
+      alert("Access Denied, You must be 18 or older to proceed");
       return;
     }
 
-    if (ageNum >= 18 && ageNum < 21) {
-      Alert.alert("Notice", "You are over 18, but only users above 21 can choose movies.");
+    else if (ageNum >= 18 && ageNum < 21) {
+      alert("Notice, You are over 18, but only users above 21 can choose movies");
       return;
     }
 
-    if (ageNum >= 21) {
+    else if (ageNum >= 21) {
       navigation.navigate("Movie");
     }
   };
