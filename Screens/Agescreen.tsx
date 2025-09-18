@@ -16,17 +16,17 @@ export default function AgeScreen({ navigation }: Props) {
     const ageNum = parseInt(age);
 
     if (isNaN(ageNum)) {
-      alert("Invalid Input, Please enter a valid number");
+      alert("Invalid Input, Please enter a valid number in the space provided");
       return;
     }
 
     else if (ageNum < 18) {
-      alert("Access Denied, You must be 18 or older to proceed");
+      alert("Access Denied, You have to be 18 or older to proceed forward");
       return;
     }
 
     else if (ageNum >= 18 && ageNum < 21) {
-      alert("Notice, You are over 18, but only users above 21 can choose movies");
+      alert("Imformed, You are 18 or older but only users above 21 can choose movies");
       return;
     }
 
@@ -37,10 +37,10 @@ export default function AgeScreen({ navigation }: Props) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Enter Your Age</Text>
+      <Text style={styles.title}>Please enter Your Age</Text>
       <TextInput
         style={styles.input}
-        placeholder="Enter age"
+        placeholder="Enter your age"
         keyboardType="numeric"
         value={age}
         onChangeText={setAge}
@@ -53,9 +53,47 @@ export default function AgeScreen({ navigation }: Props) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#f4f4f4" },
-  title: { fontSize: 22, fontWeight: "bold", marginBottom: 20 },
-  input: { width: "70%", borderWidth: 1, borderColor: "#ccc", borderRadius: 8, padding: 10, marginBottom: 20 },
-  button: { backgroundColor: "#007bff", padding: 12, borderRadius: 8, width: "50%", alignItems: "center" },
-  buttonText: { color: "#fff", fontWeight: "bold" }
+  container: { 
+    flex: 1, 
+    justifyContent: "center", 
+    alignItems: "center", 
+    backgroundColor: "#c3d8d8ff", 
+    padding: 20, 
+    borderRadius: 10 
+  },
+
+  title: {
+   fontSize: 22, 
+   fontWeight: "bold", 
+   textAlign: "center", 
+   color: "#2a585cff", 
+   textDecorationLine: "underline", 
+   marginBottom: 50,
+   },
+
+  input: { 
+    width: "70%", 
+    borderWidth: 3, 
+    borderColor: "#6f99b4ff",
+     borderRadius: 8, 
+     padding: 10, 
+     marginBottom: 20, 
+      backgroundColor: "#7bbfdfff",
+    },
+
+  button: {
+   backgroundColor: "#3d7da1ff",
+    padding: 12, 
+    borderRadius: 8, 
+    width: "50%", 
+    alignItems: "center", 
+  marginTop: 10,
+  },
+
+  buttonText: { 
+    color: "#fff", 
+    fontWeight: "bold", 
+    fontSize: 16, 
+    textAlign: "center"
+  },
 });
