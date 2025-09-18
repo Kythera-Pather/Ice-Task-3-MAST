@@ -42,7 +42,7 @@ export default function MovieScreen() {
         note = "No note available."; // Fallback (should not hit)
     }
 
-    Alert.alert("Movie Selected", `You chose: ${movies[num - 1]}\n\nNote: ${note}`);
+    alert(`Movie Selected, You chose: ${movies[num - 1]}\n\nNote: ${note}`);
   };
 
   return (
