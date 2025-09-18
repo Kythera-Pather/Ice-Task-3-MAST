@@ -83,7 +83,6 @@ const styles = StyleSheet.create({
      textAlign: "center",
      color: "#2a585cff",
      textDecorationLine: "underline",
-      textDecorationStyle: "dashed",
        textDecorationColor: "#474164ff",
      },
 
@@ -96,7 +95,7 @@ const styles = StyleSheet.create({
     },
 
   input: {
-     width: "70%", 
+     width: "30%", 
      borderWidth: 3, 
      borderColor: "#3d7da1ff", 
      borderRadius: 8, 
@@ -109,7 +108,7 @@ const styles = StyleSheet.create({
      backgroundColor: "#50857cff", 
     padding: 12, 
     borderRadius: 8, 
-    width: "60%", 
+    width: "40%", 
     alignItems: "center",
    },
 

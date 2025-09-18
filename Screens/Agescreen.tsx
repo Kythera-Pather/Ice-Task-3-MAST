@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ImageBackground } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParamList } from "../App";
 
@@ -52,6 +52,7 @@ export default function AgeScreen({ navigation }: Props) {
   );
 }
 
+
 const styles = StyleSheet.create({
   container: { 
     flex: 1, 
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
    },
 
   input: { 
-    width: "70%", 
+    width: "30%", 
     borderWidth: 3, 
     borderColor: "#6f99b4ff",
      borderRadius: 8, 
@@ -85,7 +86,7 @@ const styles = StyleSheet.create({
    backgroundColor: "#3d7da1ff",
     padding: 12, 
     borderRadius: 8, 
-    width: "50%", 
+    width: "40%", 
     alignItems: "center", 
   marginTop: 10,
   },
